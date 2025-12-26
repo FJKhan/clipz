@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Modal } from '../../shared/modal/modal';
+import { TabsContainer } from '../../shared/tabs-container/tabs-container';
+import { Tab } from '../../shared/tab/tab';
 
 @Component({
   selector: 'app-auth-modal',
-  imports: [Modal],
+  imports: [Modal, Tab, TabsContainer],
   templateUrl: './auth-modal.html',
-  styleUrl: './auth-modal.css'
+  styleUrl: './auth-modal.css',
 })
-export class AuthModal {
-
-}
+export class AuthModal {}
