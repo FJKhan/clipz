@@ -1,0 +1,16 @@
+<nav class="flex flex-nowrap mb-4 text-center">
+    @for(tab of tabs(); track $index) {
+        <a
+          class="block w-full py-3 px-4 transition first:rounded-tl-sm first:rounded-bl-sm last:rounded-tr-sm last:rounded-br-sm"
+          href="#"
+          (click)="selectTab(tab)"
+          [ngClass]="{
+            'text-indigo-400 hover:text-indigo-600 hover:bg-indigo-100': !tab.active(),
+            'hover:text-white text-white bg-indigo-400': tab.active()
+          }"
+          >{{tab.tabTitle()}}</a
+        >
+    }
+  </nav>
+
+  <ng-content></ng-content>
